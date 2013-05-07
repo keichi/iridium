@@ -1,0 +1,6 @@
+int i;
+i=0;
+while i<10 {
+	mes("hello,world!%n");
+	i=i+1;
+}

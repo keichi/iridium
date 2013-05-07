@@ -1,0 +1,79 @@
+pushs His_Lie.
+invoke SetWindowCaption
+pushi 0,
+invoke SetFullScreen
+pushi 800,
+pushi 600,
+pushi 32,
+invoke SetGraphMode
+pushi 30,
+pushi 4,
+invoke SetMessageNum
+pushi 40,
+pushi 460,
+invoke SetMessageStart
+pushi 1,
+invoke SetMessageWait
+pushs 
+pushi 23,
+pushi 2,
+invoke SetDefaultFont
+pushs glyph.png
+pushi 384,
+pushi 24,
+pushi 24,
+pushi 24,
+invoke LoadGlyphAnim
+pushi 4,
+invoke SetLayerMax
+pushi 0,
+storei bg0
+pushi 1,
+storei fg0
+pushi 2,
+storei fg1
+pushi 3,
+storei msg
+pushi 0,
+storei CrossFade
+pushi 1,
+storei MoveFade
+pushi 2,
+storei CurtainFade
+pushs sel_test.txt
+invoke SetScenarioName
+WHILE_START_1:
+pushi 1,
+jumpf WHILE_TRUE_BLOCK_1
+jump WHILE_END_1
+WHILE_TRUE_BLOCK_1:
+invoke SetupSelection
+pushs 0.みかんを選択
+invoke AddSelection
+pushs 1.りんごを選択
+invoke AddSelection
+pushs 2.なしを選択
+invoke AddSelection
+pushs 3.終了
+invoke AddSelection
+invoke GetSelection
+storei i
+loadi i
+pushi 3,
+eqi
+jumpf IF_TRUE_BLOCK_2
+jump IF_FALSE_BLOCK_2
+IF_TRUE_BLOCK_2:
+jump end
+jump IF_END_2
+IF_FALSE_BLOCK_2:
+IF_END_2:
+pushs あなたは
+loadi i
+addi
+pushs 番を選択しました。%n
+addi
+invoke mes
+jump WHILE_START_1
+WHILE_END_1:
+end:

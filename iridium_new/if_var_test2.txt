@@ -1,0 +1,9 @@
+int i;
+i=0;
+loop:
+if i<10 {
+	mes("ループ中");
+	i=i+1;
+	goto loop;
+}
+mes("終了");

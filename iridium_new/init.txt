@@ -1,0 +1,24 @@
+SetWindowCaption("His_Lie.");
+SetFullScreen(0);
+SetGraphMode(800,600,32);
+
+SetMessageNum(30,4);
+SetMessageStart(40,460);
+SetMessageWait(1);
+SetDefaultFont("",23,2);
+
+LoadGlyphAnim("glyph.png",384,24,24,24);
+
+SetLayerMax(4);
+int bg0,fg0,fg1,msg;
+bg0=0;
+fg0=1;
+fg1=2;
+msg=3;
+
+int CrossFade,MoveFade,CurtainFade;
+CrossFade=0;
+MoveFade=1;
+CurtainFade=2;
+
+SetScenarioName("sel_test.txt");

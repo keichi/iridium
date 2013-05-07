@@ -1,0 +1,37 @@
+imgxy("frame.png",3,0,420);
+fade(0);
+mes("これはテスト用のシナリオです。まずはフェードイン。%w%n");
+copy();
+img("love_161.jpg",0);
+fade(100);
+mes("レイヤ同士の重ね合わせもできます。%w%n");
+copy();
+img("man.png",2);
+fade(100);
+mes("クロスフェードもできます。%w%n");
+copy();
+img("love_169.jpg",0);
+fade(100);
+mes("フェードアウトします。%w%n");
+copy();
+clear(2);
+fade(100);
+mes("次は選択肢のテストです%w%n");
+SetupSelection();
+AddSelection("0.みかんを選択");
+AddSelection("1.りんごを選択");
+AddSelection("2.なしを選択");
+i=GetSelection();
+string message;
+message="あなたは";
+if i==0 {
+	message=message+"みかんを";
+}
+if i==1 {
+	message=message+"りんごを";
+}
+if i==2 {
+	message=message+"なしを";
+}
+message=message+"選択しましたね？";
+mes(message);

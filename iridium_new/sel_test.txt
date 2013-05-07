@@ -1,0 +1,14 @@
+int i;
+while 1 {
+	SetupSelection();
+	AddSelection("0.みかんを選択");
+	AddSelection("1.りんごを選択");
+	AddSelection("2.なしを選択");
+	AddSelection("3.終了");
+	i=GetSelection();
+	if i==3 {
+		goto end;
+	}
+	mes("あなたは"+i+"番を選択しました。%n");
+}
+end:

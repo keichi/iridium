@@ -1,0 +1,10 @@
+int i;
+img("back.png",0);
+imgxy("frame.png",1,0,420);
+fade(100);
+AddSelection("0.みかんを選択");
+AddSelection("1.りんごを選択");
+AddSelection("2.なしを選択");
+AddSelection("3.終了");
+i=GetSelection();
+mes("あなたは"+i+"番を選択しました。%n");
